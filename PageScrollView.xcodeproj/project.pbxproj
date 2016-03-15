@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C59F5291C983C7700BFEDDB /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C59F5281C983C7700BFEDDB /* demo.gif */; };
 		0C5B855A1C900C2E00B7C8EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B85591C900C2E00B7C8EF /* main.m */; };
 		0C5B855D1C900C2E00B7C8EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B855C1C900C2E00B7C8EF /* AppDelegate.m */; };
 		0C5B85601C900C2E00B7C8EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B855F1C900C2E00B7C8EF /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C59F5281C983C7700BFEDDB /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		0C5B85551C900C2E00B7C8EF /* PageScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5B85591C900C2E00B7C8EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C5B855B1C900C2E00B7C8EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C59F5271C983C7700BFEDDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C59F5281C983C7700BFEDDB /* demo.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0C5B854C1C900C2E00B7C8EF = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		0C5B85571C900C2E00B7C8EF /* PageScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				0C59F5271C983C7700BFEDDB /* Resources */,
 				0C5B85931C92569D00B7C8EF /* ProgressHud */,
 				0C5B858B1C900C4C00B7C8EF /* PageScrollView */,
 				0C5B855B1C900C2E00B7C8EF /* AppDelegate.h */,
@@ -270,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5B85681C900C2E00B7C8EF /* LaunchScreen.storyboard in Resources */,
+				0C59F5291C983C7700BFEDDB /* demo.gif in Resources */,
 				0C5B85651C900C2E00B7C8EF /* Assets.xcassets in Resources */,
 				0C5B85631C900C2E00B7C8EF /* Main.storyboard in Resources */,
 			);
@@ -524,6 +536,7 @@
 				0C5B85841C900C2F00B7C8EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C5B85851C900C2F00B7C8EF /* Build configuration list for PBXNativeTarget "PageScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +545,7 @@
 				0C5B85871C900C2F00B7C8EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C5B85881C900C2F00B7C8EF /* Build configuration list for PBXNativeTarget "PageScrollViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +554,7 @@
 				0C5B858A1C900C2F00B7C8EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
