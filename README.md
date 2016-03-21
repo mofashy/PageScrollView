@@ -22,7 +22,7 @@ self.pageScrollView.dataSource = self;
 self.pageScrollView.delegate = self;
 ```
 
-#### 2、数据源方法
+#### 3、数据源方法
 ```objc
 // 轮播器页数
 - (NSInteger)numberOfPageInPageScrollView
@@ -40,7 +40,7 @@ self.pageScrollView.delegate = self;
 }
 ```
 
-#### 3、代理方法
+#### 4、代理方法
 ```objc
 // 轮播器当前指示的页码
 - (void)pageScrollViewStopAtIndex:(NSInteger)index
@@ -51,7 +51,13 @@ self.pageScrollView.delegate = self;
 - (void)pageScrollView:(PageScrollView *)pageScrollView didSelectViewAtIndex:(NSInteger)index
 {
 }
-````
+```
+
+#### 5、开始自动轮播
+```objc
+[self.pageScrollView startAnimating];
+```
+
 注
 ======
 >1、Demo中的UIPageControl没有封装到轮播器中
