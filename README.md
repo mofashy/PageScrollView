@@ -1,19 +1,17 @@
 # PageScrollView（无限循环轮播器）
 
-特性
-======
+## 特性
+
 >1、参考UITablView，通过数据源方法为轮播器设置内容，通过代理方法处理轮播器页面的点击
 
-效果演示
-======
+## 效果演示
 
-![image](https://raw.githubusercontent.com/mofashy/PageScrollView/master/PageScrollView/Resources/demo.gif)<br/>
+![Demo GIF](PageScrollView/Resources/demo.gif)<br/>
 
-使用说明
-======
+## 使用说明
 
-#### 1、请拖拽PageScrollView目录到您的项目中<br />
-#### 2、使用控件
+### 1、请拖拽PageScrollView目录到您的项目中<br />
+### 2、使用控件
 ```objc
 // 添加无限循环轮播器
 self.pageScrollView = [[PageScrollView alloc] initWithFrame:(CGRect){{15, 20}, {290, 140}}];
@@ -22,7 +20,7 @@ self.pageScrollView.dataSource = self;
 self.pageScrollView.delegate = self;
 ```
 
-#### 3、数据源方法
+### 3、数据源方法
 ```objc
 // 轮播器页数
 - (NSInteger)numberOfPageInPageScrollView
@@ -40,7 +38,7 @@ self.pageScrollView.delegate = self;
 }
 ```
 
-#### 4、代理方法
+### 4、代理方法
 ```objc
 // 轮播器当前指示的页码
 - (void)pageScrollViewStopAtIndex:(NSInteger)index
@@ -53,11 +51,11 @@ self.pageScrollView.delegate = self;
 }
 ```
 
-#### 5、开始自动轮播
+### 5、开始自动轮播
 ```objc
 [self.pageScrollView startAnimating];
 ```
 
-注
-======
+## 注
+
 >1、Demo中的UIPageControl没有封装到轮播器中
