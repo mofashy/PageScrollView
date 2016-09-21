@@ -47,43 +47,43 @@
     self.pageControl.numberOfPages = self.array.count;
     self.pageControl.userInteractionEnabled = NO;
     
-    self.count = 0;
-    self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count++;
-        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-        [self.pageScrollView reloadData];
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count++;
-        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-        [self.pageScrollView reloadData];
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(13 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count++;
-        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-        [self.pageScrollView reloadData];
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(23 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count--;
-        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-        [self.pageScrollView reloadData];
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count--;
-        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-        [self.pageScrollView reloadData];
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count--;
-        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-        [self.pageScrollView reloadData];
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(34 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.count += self.array.count;
-        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
-        [self.pageScrollView reloadData];
-    });
+//    self.count = 0;
+//    self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.count++;
+//        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//        [self.pageScrollView reloadData];
+//    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.count++;
+//        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//        [self.pageScrollView reloadData];
+//    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(13 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.count++;
+//        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//        [self.pageScrollView reloadData];
+//    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(23 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.count--;
+//        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//        [self.pageScrollView reloadData];
+//    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.count--;
+//        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//        [self.pageScrollView reloadData];
+//    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(33 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.count--;
+//        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//        [self.pageScrollView reloadData];
+//    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(34 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        self.count += self.array.count;
+//        self.label.text = [NSString stringWithFormat:@"Total page: %ld", (long)self.count];
+//        [self.pageScrollView reloadData];
+//    });
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -102,7 +102,8 @@
 
 - (NSInteger)numberOfPageInPageScrollView
 {
-    return self.count;
+//    return self.count;
+    return self.array.count;
 }
 
 - (UIView *)pageScrollView:(PageScrollView *)pageScrollView viewForPageAtIndex:(NSInteger)index

@@ -16,7 +16,7 @@
 - (UIView *)pageScrollView:(PageScrollView *)pageScrollView viewForPageAtIndex:(NSInteger)index;
 
 @optional
-- (UIView *)emptyViewForPageInPageScrollView;
+- (UIView *)emptyViewForPageInPageScrollView:(PageScrollView *)pageScrollView;
 @end
 
 @protocol PageScrollViewDelegate <NSObject>
@@ -26,10 +26,12 @@
 @end
 
 @interface PageScrollView : UIView
-@property (strong, nonatomic) id<PageScrollViewDataSource> dataSource;
-@property (strong, nonatomic) id<PageScrollViewDelegate> delegate;
+@property (weak, nonatomic) id<PageScrollViewDataSource> dataSource;
+@property (weak, nonatomic) id<PageScrollViewDelegate> delegate;
 
 - (void)reloadData;
 - (void)startAnimating;
 - (void)stopAnimating;
+- (void)pauseAnimating;
+- (void)resumeAnimating;
 @end

@@ -18,6 +18,8 @@
 		0C5B857E1C900C2F00B7C8EF /* PageScrollViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B857D1C900C2F00B7C8EF /* PageScrollViewUITests.m */; };
 		0C5B858E1C900C6900B7C8EF /* PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B858D1C900C6900B7C8EF /* PageScrollView.m */; };
 		0C5B85961C9256B800B7C8EF /* ProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B85951C9256B800B7C8EF /* ProgressHud.m */; };
+		0CF4FB651CCE18FA00390E0D /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4FB641CCE18FA00390E0D /* UIView+Category.m */; };
+		0CF4FB681CCE196300390E0D /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4FB671CCE196300390E0D /* PageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		0C5B858D1C900C6900B7C8EF /* PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollView.m; sourceTree = "<group>"; };
 		0C5B85941C9256B800B7C8EF /* ProgressHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHud.h; sourceTree = "<group>"; };
 		0C5B85951C9256B800B7C8EF /* ProgressHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHud.m; sourceTree = "<group>"; };
+		0CF4FB631CCE18FA00390E0D /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		0CF4FB641CCE18FA00390E0D /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		0CF4FB661CCE196300390E0D /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
+		0CF4FB671CCE196300390E0D /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		0C5B85571C900C2E00B7C8EF /* PageScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				0CF4FB621CCE18DB00390E0D /* Category */,
 				0C59F5271C983C7700BFEDDB /* Resources */,
 				0C5B85931C92569D00B7C8EF /* ProgressHud */,
 				0C5B858B1C900C4C00B7C8EF /* PageScrollView */,
@@ -164,6 +171,8 @@
 			children = (
 				0C5B858C1C900C6900B7C8EF /* PageScrollView.h */,
 				0C5B858D1C900C6900B7C8EF /* PageScrollView.m */,
+				0CF4FB661CCE196300390E0D /* PageView.h */,
+				0CF4FB671CCE196300390E0D /* PageView.m */,
 			);
 			path = PageScrollView;
 			sourceTree = "<group>";
@@ -175,6 +184,15 @@
 				0C5B85951C9256B800B7C8EF /* ProgressHud.m */,
 			);
 			path = ProgressHud;
+			sourceTree = "<group>";
+		};
+		0CF4FB621CCE18DB00390E0D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0CF4FB631CCE18FA00390E0D /* UIView+Category.h */,
+				0CF4FB641CCE18FA00390E0D /* UIView+Category.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +262,7 @@
 				TargetAttributes = {
 					0C5B85541C900C2E00B7C8EF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y2A4GBHCSV;
 					};
 					0C5B856D1C900C2F00B7C8EF = {
 						CreatedOnToolsVersion = 7.2;
@@ -309,9 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5B85601C900C2E00B7C8EF /* ViewController.m in Sources */,
+				0CF4FB681CCE196300390E0D /* PageView.m in Sources */,
 				0C5B855D1C900C2E00B7C8EF /* AppDelegate.m in Sources */,
 				0C5B858E1C900C6900B7C8EF /* PageScrollView.m in Sources */,
 				0C5B855A1C900C2E00B7C8EF /* main.m in Sources */,
+				0CF4FB651CCE18FA00390E0D /* UIView+Category.m in Sources */,
 				0C5B85961C9256B800B7C8EF /* ProgressHud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,10 +472,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PageScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = YCS.PageScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -462,10 +486,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PageScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = YCS.PageScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

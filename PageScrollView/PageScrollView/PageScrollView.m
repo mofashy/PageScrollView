@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, PageScrollViewDirection) {
     PageScrollViewDirectionRight        // 向右滑动
 };
 
-static const NSTimeInterval kTimeInterval = 3.0;
+static const NSTimeInterval kTimeInterval = 4.0;
 
 @interface PageScrollView () <UIScrollViewDelegate>
 @property (assign, nonatomic) BOOL                    isTimeUp;
@@ -280,9 +280,9 @@ static const NSTimeInterval kTimeInterval = 3.0;
 
 - (UIView *)emptyViewForPage
 {
-    if ([self.dataSource respondsToSelector:@selector(emptyViewForPageInPageScrollView)]) {
+    if ([self.dataSource respondsToSelector:@selector(emptyViewForPageInPageScrollView:)]) {
         
-        return [self.dataSource emptyViewForPageInPageScrollView];
+        return [self.dataSource emptyViewForPageInPageScrollView:self];
     } else {
         
         return nil;
@@ -393,12 +393,13 @@ static const NSTimeInterval kTimeInterval = 3.0;
 
 - (void)stopAnimating
 {
-    [self.timer invalidate];
+    [_timer invalidate];
+    _timer = nil;
 }
 
 - (void)pauseAnimating
 {
-    [self.timer setFireDate:[NSDate distantFuture]];
+    [_timer setFireDate:[NSDate distantFuture]];
 }
 
 - (void)resumeAnimating
